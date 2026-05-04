@@ -1,0 +1,51 @@
+@use 'splash-screen';
+
+* {
+  margin: 0;
+  user-select: none;
+}
+
+body {
+  font-family: monospace;
+  background-color: #000;
+  overflow: hidden;
+}
+
+#root {
+  height: 100dvh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.background {
+  background-image: url(@/assets/background.png);
+  background-size: cover;
+  filter: drop-shadow(0px 0px 6px black);
+}
+
+.phone {
+  position: absolute;
+  margin: 1rem;
+  right: 0px;
+  bottom: 0px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.volume {
+  flex-direction: column;
+  display: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.phone:hover > .volume {
+  display: flex;
+}
